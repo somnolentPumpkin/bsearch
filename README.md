@@ -26,5 +26,12 @@ Line 26:        url = base_url + endpoint
 
 Found in (./main.py)
 Line 40: def delete_by_id(endpoint, id)
-
 ```
+
+### Installation
+1. Execute `git clone https://github.com/somnolentPumpkin/bsearch.git`.
+2. Execute `cd bsearch`.
+3. Execute `sudo chmod +x bsearch`.
+4. Execute `./bsearch <DIRECTORY> <TEXT>`
+
+Optionally, if you want to be able to run the script from anywhere, you can put the `bsearch` script in your `/bin` folder. To do that, execute `sudo mv bsearch /bin/bsearch`.

@@ -2,9 +2,6 @@
 
 DIRECTORY="."
 TEXT=""
-VALID=false
-TOTAL_RESULTS=0
-RESULTS=0
 
 execute_search() {
         FILE=""

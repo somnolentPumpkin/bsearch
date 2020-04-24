@@ -34,4 +34,4 @@ Line 40: def delete_by_id(endpoint, id)
 3. Execute `sudo chmod +x bsearch`.
 4. Execute `./bsearch <DIRECTORY> <TEXT>`
 
-Optionally, if you want to be able to run the script from anywhere, you can put the `bsearch` script in your `/bin` folder. To do that, execute `sudo mv bsearch /bin/bsearch`.
+Optionally, if you want to be able to run the script from anywhere, you can put the `bsearch` script in your `/bin` folder. To do that, execute `sudo mv bsearch /bin/bsearch` on Linux, or `sudo mv bsearch /usr/local/bin/bsearch` on OS X.

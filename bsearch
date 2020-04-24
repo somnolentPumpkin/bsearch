@@ -1,0 +1,32 @@
+#!/bin/bash
+
+DIRECTORY="."
+TEXT=""
+VALID=false
+TOTAL_RESULTS=0
+RESULTS=0
+
+execute_search() {
+        FILE=""
+        VALUE=""
+        grep -rnwi "$DIRECTORY" -e "$TEXT" 2>/dev/null | while read line; do
+                FILE=$(echo "$line" | cut -d":" -f1 | cut -d" " -f1)
+                NUMBER=$(echo "$line" | cut -d":" -f2)
+                VALUE=$(echo "$line" | cut -d":" -f3)
+                echo -e "Found in ($FILE) \nLine $NUMBER: $VALUE\n"
+        done
+}
+
+if [ $# == 0 ];
+then
+        echo -e "No search text specified."
+elif [ $# == 1 ];
+then
+        TEXT="$1"
+        execute_search
+elif [ $# == 2 ];
+then
+        DIRECTORY="$1"
+        TEXT="$2"
+        execute_search
+fi
